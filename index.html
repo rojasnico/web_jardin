@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jardín Infantil Remanso · Las Condes</title>
+<meta name="description" content="Jardín Infantil Remanso, Las Condes. Más de 30 años acompañando la infancia con metodología Agazziana y un fuerte sello artístico. Un espacio sereno donde los niños crecen felices.">
+<meta property="og:title" content="Jardín Infantil Remanso">
+<meta property="og:description" content="Un remanso para crecer. Más de 30 años de educación parvularia en Las Condes.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --arcilla:#c97b53;
+  --arcilla-claro:#e8a981;
+  --durazno:#f6e3d4;
+  --crema:#fbf5ee;
+  --salvia:#8a9b7a;
+  --salvia-osc:#5f6e51;
+  --tinta:#2e3a44;
+  --tinta-suave:#5a6670;
+  --blanco:#ffffff;
+  --radio:22px;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Outfit',sans-serif;
+  color:var(--tinta);
+  background:var(--crema);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- NAV ---------- */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,245,238,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(46,58,68,.07);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;text-decoration:none;color:var(--tinta)}
+.brand .mark{width:38px;height:38px;flex:none}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:.95rem;font-weight:400;color:var(--tinta-suave);transition:color .2s}
+.nav-links a:hover{color:var(--arcilla)}
+.nav-cta{background:var(--arcilla);color:#fff!important;padding:10px 20px;border-radius:100px;font-weight:500;transition:background .2s}
+.nav-cta:hover{background:#b56843}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:var(--tinta);margin:5px 0;transition:.3s}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:80px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--salvia-osc);font-weight:500;margin-bottom:22px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--salvia)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.1rem);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--arcilla)}
+.hero p.lead{font-size:1.18rem;color:var(--tinta-suave);max-width:30ch;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;border-radius:100px;font-weight:500;text-decoration:none;font-size:1rem;transition:transform .15s,background .2s,box-shadow .2s;cursor:pointer;border:0}
+.btn-primary{background:var(--arcilla);color:#fff;box-shadow:0 10px 24px -10px rgba(201,123,83,.7)}
+.btn-primary:hover{background:#b56843;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--tinta);border:1.5px solid rgba(46,58,68,.18)}
+.btn-ghost:hover{border-color:var(--arcilla);color:var(--arcilla)}
+.hero-art{position:relative;aspect-ratio:1/1;border-radius:50% 50% 48% 52%/52% 50% 50% 48%;background:linear-gradient(150deg,var(--arcilla-claro),var(--durazno));overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.hero-art .glyph{font-family:'Fraunces',serif;font-size:13rem;color:rgba(255,255,255,.5);position:absolute;top:8%;font-style:italic;user-select:none}
+.hero-art .kids{font-size:6rem;margin-bottom:10%;filter:saturate(1.05)}
+.hero-stats{display:flex;gap:38px;margin-top:46px;padding-top:30px;border-top:1px solid rgba(46,58,68,.1)}
+.stat .n{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--arcilla);font-weight:600}
+.stat .l{font-size:.86rem;color:var(--tinta-suave);max-width:14ch}
+
+/* wave divider */
+.wave{display:block;width:100%;height:70px;margin-top:-1px}
+.wave path{fill:var(--durazno)}
+
+/* ---------- SECTIONS ---------- */
+section.band{padding:90px 0}
+.band.durazno{background:var(--durazno)}
+.sec-head{max-width:60ch;margin-bottom:54px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.8rem)}
+.sec-head p{color:var(--tinta-suave);font-size:1.1rem;margin-top:14px}
+
+/* pilares */
+.pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pilar{background:var(--blanco);border-radius:var(--radio);padding:30px 26px;border:1px solid rgba(46,58,68,.06);transition:transform .2s,box-shadow .2s}
+.pilar:hover{transform:translateY(-5px);box-shadow:0 18px 36px -22px rgba(46,58,68,.35)}
+.pilar .ic{font-size:2rem;margin-bottom:16px}
+.pilar h3{font-size:1.22rem;margin-bottom:8px}
+.pilar p{font-size:.94rem;color:var(--tinta-suave)}
+
+/* nosotros */
+.nos-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.nos-img{aspect-ratio:4/3;border-radius:var(--radio);background:linear-gradient(160deg,var(--salvia),var(--salvia-osc));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.nos-img .em{font-size:5.5rem}
+.nos-img .badge{position:absolute;bottom:18px;left:18px;background:var(--crema);border-radius:100px;padding:8px 18px;font-size:.85rem;font-weight:500;color:var(--salvia-osc)}
+.nos-text h2{font-size:clamp(2rem,3.6vw,2.7rem);margin-bottom:18px}
+.nos-text p{color:var(--tinta-suave);margin-bottom:16px;font-size:1.06rem}
+.nos-text strong{color:var(--tinta);font-weight:500}
+
+/* talleres */
+.talleres{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.taller{border-radius:var(--radio);padding:38px 34px;color:#fff;position:relative;overflow:hidden;min-height:230px;display:flex;flex-direction:column;justify-content:flex-end}
+.taller.musica{background:linear-gradient(145deg,#c97b53,#a85f3c)}
+.taller.fisica{background:linear-gradient(145deg,#8a9b7a,#5f6e51)}
+.taller .ic{position:absolute;top:26px;right:30px;font-size:3.4rem;opacity:.55}
+.taller h3{font-size:1.6rem;margin-bottom:10px}
+.taller p{opacity:.92;font-size:1rem}
+
+/* noticias / agenda */
+.notas{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.nota{background:#fff;border-radius:var(--radio);overflow:hidden;border:1px solid rgba(46,58,68,.06);transition:transform .2s,box-shadow .2s}
+.nota:hover{transform:translateY(-5px);box-shadow:0 18px 36px -22px rgba(46,58,68,.35)}
+.nota .ph{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.nota .ph.a{background:#f3d9c5}.nota .ph.b{background:#dde4d3}.nota .ph.c{background:#f6e3d4}
+.nota .body{padding:22px 24px}
+.nota .tag{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--arcilla);font-weight:600}
+.nota h3{font-size:1.18rem;margin:8px 0 10px}
+.nota p{font-size:.92rem;color:var(--tinta-suave)}
+
+/* testimonios */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi{background:var(--blanco);border-radius:var(--radio);padding:32px 30px;border:1px solid rgba(46,58,68,.06);position:relative}
+.testi::before{content:"\201C";font-family:'Fraunces',serif;font-size:4.5rem;color:var(--arcilla-claro);position:absolute;top:6px;left:22px;line-height:1}
+.testi p{font-size:.98rem;color:var(--tinta);margin:30px 0 18px;font-style:italic}
+.testi .who{font-size:.88rem;color:var(--tinta-suave);font-weight:500}
+
+/* instagram */
+.ig-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.ig-handle{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#c97b53,#a85f3c);color:#fff;padding:11px 22px;border-radius:100px;text-decoration:none;font-weight:500;transition:transform .15s,box-shadow .2s;box-shadow:0 10px 24px -12px rgba(201,123,83,.8)}
+.ig-handle:hover{transform:translateY(-2px)}
+.ig-handle svg{width:20px;height:20px;fill:#fff}
+.ig-widget{border-radius:var(--radio);overflow:hidden}
+/* fallback grid (placeholder hasta pegar el widget real) */
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ig-cell{aspect-ratio:1/1;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;position:relative;overflow:hidden;text-decoration:none;transition:transform .2s,filter .2s}
+.ig-cell:hover{transform:scale(1.02);filter:brightness(1.04)}
+.ig-cell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(46,58,68,.28));opacity:0;transition:opacity .2s}
+.ig-cell:hover::after{opacity:1}
+.ig-cell.c1{background:#f3d9c5}.ig-cell.c2{background:#dde4d3}.ig-cell.c3{background:#f6e3d4}
+.ig-cell.c4{background:#e8dcc9}.ig-cell.c5{background:#e4dbe0}.ig-cell.c6{background:#d6e0e4}
+.ig-cell.c7{background:#f1e2cf}.ig-cell.c8{background:#dde7da}
+.ig-note{font-size:.86rem;color:var(--tinta-suave);margin-top:18px;text-align:center}
+.ig-note a{color:var(--arcilla)}
+
+/* ubicacion */
+.ubi-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
+.ubi-info{display:flex;flex-direction:column;justify-content:center}
+.ubi-rating{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
+.ubi-rating .stars{color:#e0a23c;font-size:1.15rem;letter-spacing:2px}
+.ubi-rating .score{font-family:'Fraunces',serif;font-weight:600;color:var(--tinta)}
+.ubi-rating .count{font-size:.88rem;color:var(--tinta-suave)}
+.ubi-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin:8px 0 28px}
+.ubi-list li{display:flex;gap:14px;align-items:flex-start;font-size:1rem;color:var(--tinta)}
+.ubi-list .ic{flex:none;width:38px;height:38px;border-radius:12px;background:var(--durazno);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.ubi-list .lbl{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-suave);display:block;margin-bottom:1px}
+.ubi-list a{color:var(--tinta);text-decoration:none}
+.ubi-list a:hover{color:var(--arcilla)}
+.ubi-map{border-radius:var(--radio);overflow:hidden;min-height:340px;border:1px solid rgba(46,58,68,.08);box-shadow:0 18px 40px -26px rgba(46,58,68,.5)}
+.ubi-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+/* contacto */
+.contacto{background:var(--tinta);color:var(--crema);border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contacto h2{color:#fff;font-size:clamp(2rem,3.4vw,2.6rem);margin-bottom:14px}
+.contacto .lead{color:rgba(251,245,238,.75);margin-bottom:28px}
+.contacto .info{list-style:none;display:flex;flex-direction:column;gap:14px}
+.contacto .info li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:rgba(251,245,238,.9)}
+.contacto .info .ic{color:var(--arcilla-claro)}
+.contacto a{color:var(--arcilla-claro);text-decoration:none}
+.form{display:flex;flex-direction:column;gap:14px}
+.form input,.form textarea{font-family:inherit;font-size:1rem;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;width:100%}
+.form input::placeholder,.form textarea::placeholder{color:rgba(251,245,238,.5)}
+.form input:focus,.form textarea:focus{outline:2px solid var(--arcilla-claro);border-color:transparent}
+.form button{align-self:flex-start}
+.form .note{font-size:.8rem;color:rgba(251,245,238,.55)}
+
+/* footer */
+footer{padding:60px 0 36px;background:var(--durazno)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid h4{font-family:'Fraunces',serif;font-size:1.1rem;margin-bottom:14px}
+.foot-grid p,.foot-grid li{font-size:.92rem;color:var(--tinta-suave);list-style:none;margin-bottom:8px}
+.foot-grid a{text-decoration:none;color:var(--tinta-suave)}
+.foot-grid a:hover{color:var(--arcilla)}
+.foot-bottom{border-top:1px solid rgba(46,58,68,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:var(--tinta-suave)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:72px 0 auto 0;background:var(--crema);flex-direction:column;gap:0;padding:10px 24px 24px;border-bottom:1px solid rgba(46,58,68,.08);transform:translateY(-130%);transition:transform .3s;height:auto}
+  .nav-links.open{transform:none}
+  .nav-links li{width:100%;padding:10px 0;border-bottom:1px solid rgba(46,58,68,.06)}
+  .nav-cta{display:inline-block;margin-top:8px}
+  .burger{display:block}
+  .hero-grid,.nos-grid,.talleres,.contacto,.ubi-grid{grid-template-columns:1fr}
+  .hero-art{max-width:360px;margin:10px auto 0}
+  .pilares,.notas,.testis{grid-template-columns:1fr}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .contacto{padding:38px 26px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+}
+@media(max-width:1024px) and (min-width:861px){
+  .pilares{grid-template-columns:1fr 1fr}
+  .notas,.testis{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#c97b53"/><path d="M8 24c4-5 8 5 12 0s8 5 12 0" stroke="#fbf5ee" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M8 17c4-5 8 5 12 0s8 5 12 0" stroke="#fbf5ee" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".55"/></svg>
+      Remanso
+    </a>
+    <nav>
+      <ul class="nav-links" id="menu">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#talleres">Talleres</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-cta">Agenda tu visita</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Jardín Infantil · Las Condes · desde 1992</span>
+        <h1>Un <em>remanso</em> para crecer, jugar y descubrir el mundo.</h1>
+        <p class="lead">Más de 30 años acompañando la primera infancia con calidez, arte y la mirada cercana de la metodología Agazziana.</p>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary">Agenda una visita</a>
+          <a href="#nosotros" class="btn btn-ghost">Conoce el proyecto</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="n">30+</div><div class="l">años de historia</div></div>
+          <div class="stat"><div class="n">1992</div><div class="l">año de fundación</div></div>
+          <div class="stat"><div class="n">Arte</div><div class="l">presente cada día</div></div>
+        </div>
+      </div>
+      <div class="hero-art reveal" aria-hidden="true">
+        <span class="glyph">~</span>
+        <span class="kids">🧒🎨</span>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,75 480,5 720,30 C960,55 1200,15 1440,40 L1440,70 L0,70 Z"/></svg>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="band durazno" id="nosotros">
+    <div class="wrap nos-grid">
+      <div class="nos-img reveal" aria-hidden="true">
+        <span class="em">🌿</span>
+        <span class="badge">Metodología Agazziana</span>
+      </div>
+      <div class="nos-text reveal">
+        <span class="eyebrow">Nosotros</span>
+        <h2>Un espacio sereno donde cada niño despliega lo suyo.</h2>
+        <p>Remanso nace en <strong>1992</strong> ante la necesidad de ofrecer un lugar tranquilo y afectuoso donde niñas y niños de la comunidad desarrollen todas sus potencialidades.</p>
+        <p>Trabajamos desde la <strong>metodología Agazziana</strong>, que pone la vida cotidiana, la naturaleza y el orden afectivo en el centro del aprendizaje. El <strong>arte está presente en todo momento</strong> como herramienta de crecimiento y desarrollo integral.</p>
+        <a href="#contacto" class="btn btn-primary" style="margin-top:8px">Quiero conocerlos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section class="band" id="pilares">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Nuestro sello</span>
+        <h2>Cuatro pilares que sostienen cada día</h2>
+        <p>Lo que vive un niño en Remanso, más allá del programa.</p>
+      </div>
+      <div class="pilares">
+        <div class="pilar reveal"><div class="ic">🎨</div><h3>Arte</h3><p>La expresión plástica y creativa acompaña la jornada como forma de explorar y comunicar.</p></div>
+        <div class="pilar reveal"><div class="ic">🎵</div><h3>Música</h3><p>Ritmo, canto y movimiento para desarrollar sensibilidad, lenguaje y vínculo.</p></div>
+        <div class="pilar reveal"><div class="ic">🌱</div><h3>Naturaleza</h3><p>La vida cotidiana y el entorno natural como aula viva, fiel al espíritu Agazziano.</p></div>
+        <div class="pilar reveal"><div class="ic">🤗</div><h3>Vínculo afectivo</h3><p>Educadoras cercanas que generan confianza, autonomía y seguridad en cada niño.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALLERES -->
+  <section class="band durazno" id="talleres">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Talleres</span>
+        <h2>Experiencias que amplían el mundo</h2>
+      </div>
+      <div class="talleres">
+        <div class="taller musica reveal"><span class="ic">🎼</span><h3>Taller de Música</h3><p>Exploración sonora, canto y expresión corporal guiada por especialistas.</p></div>
+        <div class="taller fisica reveal"><span class="ic">⚽</span><h3>Taller de Ed. Física</h3><p>Juego y movimiento para desarrollar coordinación, equilibrio y confianza.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA / NOTICIAS -->
+  <section class="band" id="agenda">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Agenda &amp; novedades</span>
+        <h2>Lo que vivimos en el jardín</h2>
+        <p>Momentos recientes de nuestra comunidad.</p>
+      </div>
+      <div class="notas">
+        <article class="nota reveal"><div class="ph a">🎂</div><div class="body"><span class="tag">Celebración</span><h3>Cumpleaños con show de magia</h3><p>Festejamos a todos los niños y niñas del mes con una mañana inolvidable.</p></div></article>
+        <article class="nota reveal"><div class="ph b">🐑</div><div class="body"><span class="tag">Salida</span><h3>Visita a la granja educativa</h3><p>Creamos lazos con los animales, aprendiendo a cuidarlos y protegerlos.</p></div></article>
+        <article class="nota reveal"><div class="ph c">🖼️</div><div class="body"><span class="tag">Arte</span><h3>Clausura del mes del arte</h3><p>Exposición de los trabajos realizados por los niños durante todo el mes.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="band durazno">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Familias Remanso</span>
+        <h2>Lo que dicen quienes ya son parte</h2>
+      </div>
+      <div class="testis">
+        <div class="testi reveal"><p>Con mis 3 niños encontré en Remanso la confianza, cariño y seguridad que para mí era lo más importante. El resultado son niños felices y con grandes ganas de aprender.</p><div class="who">Paulina Acevedo · Mamá de Cata, Antonia y José Manuel</div></div>
+        <div class="testi reveal"><p>Llegamos a Santiago sin red de apoyo y Remanso se convirtió en nuestro espacio seguro. La calidad humana de las tías es excepcional.</p><div class="who">Leyla Hawas · Mamá de Lucas</div></div>
+        <div class="testi reveal"><p>Fueron para nuestra Antonia un pilar fundamental en su formación. Por eso el próximo año inscribimos también a Constanza.</p><div class="who">Familia Buñay Naguelquin</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="band" id="instagram">
+    <div class="wrap">
+      <div class="ig-head reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow">Síguenos</span>
+          <h2>El día a día en nuestro Instagram</h2>
+          <p>Fotos, actividades y momentos de la comunidad Remanso.</p>
+        </div>
+        <a class="ig-handle" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2Zm0 1.95c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.2-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.32a4.53 4.53 0 1 1 0 9.06 4.53 4.53 0 0 1 0-9.06Zm0 7.47a2.94 2.94 0 1 0 0-5.88 2.94 2.94 0 0 0 0 5.88Zm5.77-7.67a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0Z"/></svg>
+          @jardinremanso
+        </a>
+      </div>
+
+      <!-- ===========================================================
+           AQUÍ VA EL FEED AUTOMÁTICO DE INSTAGRAM (LightWidget)
+           Pasos para activarlo (gratis, se actualiza solo):
+           1. Entra a https://lightwidget.com
+           2. Pega la URL: https://www.instagram.com/jardinremanso/
+           3. Personaliza columnas/estilo y copia el código que te dan.
+           4. Reemplaza TODO el bloque .ig-grid de abajo por ese código.
+           Mientras tanto, se muestra esta cuadrícula de ejemplo.
+      ============================================================ -->
+      <div class="ig-widget reveal">
+        <div class="ig-grid">
+          <a class="ig-cell c1" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🎨</a>
+          <a class="ig-cell c2" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🎵</a>
+          <a class="ig-cell c3" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🌱</a>
+          <a class="ig-cell c4" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🧒</a>
+          <a class="ig-cell c5" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🎂</a>
+          <a class="ig-cell c6" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🐑</a>
+          <a class="ig-cell c7" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">🖼️</a>
+          <a class="ig-cell c8" href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener" aria-label="Ver en Instagram">📚</a>
+        </div>
+      </div>
+      <p class="ig-note">Cuadrícula de ejemplo. Para mostrar las publicaciones reales y que se actualicen solas, conecta el feed gratuito de <a href="https://lightwidget.com" target="_blank" rel="noopener">LightWidget</a> (instrucciones en el código y en el README).</p>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section class="band durazno" id="ubicacion">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-bottom:40px">
+        <span class="eyebrow">Dónde estamos</span>
+        <h2>Visítanos en Las Condes</h2>
+        <p>Estamos en una zona tranquila y residencial, fáciles de ubicar.</p>
+      </div>
+      <div class="ubi-grid">
+        <div class="ubi-info reveal">
+          <div class="ubi-rating">
+            <span class="stars">★★★★★</span>
+            <span class="score">5,0</span>
+            <span class="count">en Google · 11 reseñas</span>
+          </div>
+          <ul class="ubi-list">
+            <li><span class="ic">📍</span><div><span class="lbl">Dirección</span><a href="https://maps.google.com/?cid=5200887055564440526" target="_blank" rel="noopener">Félix de Amesti 237, Las Condes</a></div></li>
+            <li><span class="ic">🕗</span><div><span class="lbl">Horario</span>Lunes a viernes · 8:00 a 18:30 hrs</div></li>
+            <li><span class="ic">📞</span><div><span class="lbl">Teléfono</span><a href="tel:+56222087129">+56 22 208 7129</a></div></li>
+            <li><span class="ic">✉️</span><div><span class="lbl">Correo</span><a href="mailto:contacto@remanso.cl">contacto@remanso.cl</a></div></li>
+          </ul>
+          <a class="btn btn-primary" href="https://maps.google.com/?cid=5200887055564440526" target="_blank" rel="noopener" style="align-self:flex-start">Cómo llegar</a>
+        </div>
+        <div class="ubi-map reveal">
+          <iframe
+            title="Ubicación de Jardín Infantil Remanso en Google Maps"
+            src="https://maps.google.com/maps?q=F%C3%A9lix%20de%20Amesti%20237%2C%20Las%20Condes%2C%20Santiago&z=16&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="band" id="contacto">
+    <div class="wrap">
+      <div class="contacto reveal">
+        <div>
+          <h2>Agenda tu visita</h2>
+          <p class="lead">Conoce nuestros espacios y nuestro equipo. Escríbenos y coordinamos una visita guiada sin compromiso.</p>
+          <ul class="info">
+            <li><span class="ic">📞</span><div><a href="tel:+56222087129">+56 22 208 7129</a> · <a href="tel:+56222355147">+56 22 235 5147</a></div></li>
+            <li><span class="ic">✉️</span><a href="mailto:contacto@remanso.cl">contacto@remanso.cl</a></li>
+            <li><span class="ic">🕗</span> Lun a Vie · 8:00 a 18:30 hrs</li>
+            <li><span class="ic">📍</span> Félix de Amesti 237, Las Condes, Santiago</li>
+            <li><span class="ic">📷</span> <a href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener">@jardinremanso</a></li>
+          </ul>
+        </div>
+        <form class="form" id="visitaForm" novalidate>
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="email" name="email" placeholder="Tu correo" required>
+          <input type="tel" name="fono" placeholder="Teléfono (opcional)">
+          <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué te gustaría saber"></textarea>
+          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+          <span class="note">Te responderemos a la brevedad en horario hábil.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Jardín Infantil Remanso</h4>
+        <p>Un espacio sereno y afectivo para la primera infancia en Las Condes, desde 1992.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#pilares">Pilares</a></li>
+          <li><a href="#talleres">Talleres</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+56222087129">+56 22 208 7129</a></li>
+          <li><a href="mailto:contacto@remanso.cl">contacto@remanso.cl</a></li>
+          <li><a href="https://www.instagram.com/jardinremanso/" target="_blank" rel="noopener">Instagram @jardinremanso</a></li>
+          <li>Lun a Vie · 8:00–18:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Jardín Infantil Remanso · Las Condes</span>
+      <span>Metodología Agazziana · Sello artístico</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// menú móvil
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+// año
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// formulario (demo, sin backend)
+document.getElementById('visitaForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target;
+  if(!f.nombre.value.trim()||!f.email.value.trim()){f.reportValidity&&f.reportValidity();return;}
+  // sin backend: abre el cliente de correo con los datos
+  const asunto=encodeURIComponent('Solicitud de visita · '+f.nombre.value);
+  const cuerpo=encodeURIComponent('Nombre: '+f.nombre.value+'\nCorreo: '+f.email.value+'\nTeléfono: '+(f.fono.value||'-')+'\n\n'+(f.mensaje.value||''));
+  window.location.href='mailto:contacto@remanso.cl?subject='+asunto+'&body='+cuerpo;
+});
+</script>
+</body>
+</html>
